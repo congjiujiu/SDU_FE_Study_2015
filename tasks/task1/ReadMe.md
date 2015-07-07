@@ -7,6 +7,14 @@
 
 ##### 7.8 - 7.13
 
+### 前提
+
+##### 工具准备
+
+- 电脑
+- chrome和firefox浏览器，如果使用firefox浏览器请下载安装firebug插件
+- 编辑器可以使用简单的sublime text 2或者使用webstorm，webstorm使用学生邮箱可以申请免费使用
+
 ### Start
 
 #### 1. 建立你的第一个网页
