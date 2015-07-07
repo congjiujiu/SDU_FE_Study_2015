@@ -82,7 +82,7 @@
 - [w3school css](http://w3school.com.cn/css/index.asp)
 - [深入了解行高属性](http://www.cnblogs.com/fengzheng126/archive/2012/05/18/2507632.html)
 
-#### 8. 验证
+#### 6. 验证
 
 经过上面的练习，您是否已经能够熟练到能够在一天甚至半天之内完成任务7的编码呢？或者不带任何犹豫地可以知道
 
