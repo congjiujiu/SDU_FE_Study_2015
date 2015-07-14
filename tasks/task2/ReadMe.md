@@ -61,7 +61,7 @@
 使用刚刚创建好的`task0002.html`，在这个页面的`</body>`前增加这么一段代码
 
 	<script>
-	alert("Hello World!");
+		alert("Hello World!");
 	</script>
 
 刷新一下页面，DONE
@@ -69,7 +69,7 @@
 好吧，这是我们很多年前才干的事情，现在更多时候是这样的
 
 	<script>
-	console.log("Hello World!");
+		console.log("Hello World!");
 	</script>
 
 刷新一下页面，在Chrome中打开开发者工具，看看控制台里发生了什么。记住这个`console.log`，后续你会经常用着它。
@@ -80,4 +80,86 @@
 	<input id="number2" type="text">
 	<span id="result"></span>
 	<button id="addbtn"></button>
+
+同时，在`<script>`标签中做一下修改
+
+	<script>
+	function $(id) {
+    	return document.getElementById(id);
+	}
+
+	function add(num1, num2) {
+    	return num1 + num2;
+	}
+
+	function renderResult(result) {
+    	$("result").innerHTML = result;
+	}
+
+	function addEventHandle() {
+    	var num1 = $("number1").value;
+    	var num2 = $("number2").value;
+    	var result = add(num1, num2);
+    	renderResult(result);
+	}
+
+	function initEvent() {
+    	$("addbtn").addEventListener("click", addEventHandle, false);
+	}
+
+	initEvent();
+	</script>
+
+试试在Chrome下看看什么效果，再看看在IE8下什么效果。是不是有什么区别呢？先不着急寻找答案。
+
+然后，试着建立一个新的`xxxx.js`的文件，把上面`<script>`里面的内容剪贴过去，在html中引入这个文件。
+
+接下来的课程主要围绕JavaScript自身的一些基础知识，如果你对计算机编程本身还是不够熟悉，那就建议花比别人更多的时间多写点代码。
+
+###### 3.3 目标
+- 了解JavaScript是什么
+- 如何在HTML页面加载JavaScript代码
+- 搜索一下，为什么我们让你把`<script>`放在`</body>`前。
+
+###### 3.4 参考资料
+- [JavaScript 的性能优化：加载和执行](http://www.ibm.com/developerworks/cn/web/1308_caiys_jsload/index.html)
+
+###### 4、JavaScript数据类型及语言基础
+####### 4.1 2.1 任务描述
+
+- 创建一个JavaScript文件，比如`util.js`；
+- 实践判断各种数据类型的方法，并在`util.js`中实现以下方法：
+```
+	function isArray(arr) {
+    	your implement
+	}
+
+	function isFunction(fn) {
+    	your implement
+	}
+```
+- 了解值类型和引用类型的区别，了解各种对象的读取、遍历方式，并在`util.js`中实现以下方法：
+- 以下
+```
+	var srcObj = {
+	    a: 1,
+    	b: {
+	        b1: ["hello", "hi"],
+        	b2: "JavaScript"
+    	}
+	};
+	var abObj = srcObj;
+	var tarObj = cloneObject(srcObj);
+
+	srcObj.a = 2;
+	srcObj.b.b1[0] = "Hello";
+
+	console.log(abObj.a);
+	console.log(abObj.b.b1[0]);
+
+	console.log(tarObj.a);      // 1
+	console.log(tarObj.b.b1[0]);    // "hello"
+```
+
+
 
